@@ -12,7 +12,7 @@ namespace Biblioteca
             //this.BackColor = System.Drawing.Color.FromArgb(128, 64, 0);
             //this.BackColor = System.Drawing.Color.FromArgb(25, 11, 5);
         }
-       
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -47,13 +47,24 @@ namespace Biblioteca
 
             if (administrador.Login(username, password))
             {
+                ErrorCredenciales.Text = string.Empty;
+              
                 MessageBox.Show("Login exitoso");
+           
+
                 // Aquí puedes abrir el siguiente formulario y pasar la instancia de administrador
             }
             else
             {
-                MessageBox.Show("Credenciales incorrectas");
+                // MessageBox.Show("Credenciales incorrectas");
+                ErrorCredenciales.Text = "[i] Credenciales incorrectas";
+
             }
+
+        }
+
+        private void ErrorCredenciales_Click(object sender, EventArgs e)
+        {
 
         }
     }

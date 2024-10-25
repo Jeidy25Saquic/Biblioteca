@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace Biblioteca
@@ -25,8 +26,9 @@ namespace Biblioteca
 
         private void CargarComboBox()
         {
-            comboRol.Items.Add("lector");
-            comboRol.Items.Add("bibliotecario");
+            comboRol.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboRol.Items.Add("Lector");
+            comboRol.Items.Add("Bibliotecario");
             
         }
 
@@ -52,6 +54,8 @@ namespace Biblioteca
 
         private void comboRol_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
+            // para que no deje ecribier solo deje seleccionar 
 
         }
 
@@ -79,14 +83,15 @@ namespace Biblioteca
             }
 
             if (!administracion.VerificarUsuarios(usuario))
-            {  Usuario nuevoUsuario = new Usuario(usuario, nombre, contraseña, rol);
+            { Usuario nuevoUsuario = new Usuario(usuario, nombre, contraseña, rol);
                 administracion.AgregarUsuario(nuevoUsuario);
-               
+
                 MessageBox.Show("Usuario creado exitosamente.");
             }
             else
             {
                 MessageBox.Show("El usuario ya existe.");
+                textUsuario.Text = string.Empty;
             }
         }
 

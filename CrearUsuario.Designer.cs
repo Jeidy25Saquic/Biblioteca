@@ -88,38 +88,43 @@
             // textUsuario
             // 
             textUsuario.BackColor = Color.FromArgb(248, 244, 227);
+            textUsuario.Font = new Font("Verdana", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textUsuario.Location = new Point(164, 92);
             textUsuario.Name = "textUsuario";
-            textUsuario.Size = new Size(410, 27);
+            textUsuario.Size = new Size(410, 29);
             textUsuario.TabIndex = 4;
             textUsuario.TextChanged += textUsuario_TextChanged;
             // 
             // textNombre
             // 
             textNombre.BackColor = Color.FromArgb(248, 244, 227);
+            textNombre.Font = new Font("Verdana", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textNombre.Location = new Point(164, 144);
             textNombre.Name = "textNombre";
-            textNombre.Size = new Size(410, 27);
+            textNombre.Size = new Size(410, 29);
             textNombre.TabIndex = 5;
             textNombre.TextChanged += textNombre_TextChanged;
             // 
             // textContraseña
             // 
             textContraseña.BackColor = Color.FromArgb(248, 244, 227);
+            textContraseña.Font = new Font("Verdana", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textContraseña.Location = new Point(201, 239);
             textContraseña.Name = "textContraseña";
-            textContraseña.Size = new Size(373, 27);
+            textContraseña.Size = new Size(373, 29);
             textContraseña.TabIndex = 6;
             textContraseña.TextChanged += textContraseña_TextChanged;
             // 
             // comboRol
             // 
             comboRol.BackColor = Color.FromArgb(248, 244, 227);
-            comboRol.ForeColor = Color.OrangeRed;
+            comboRol.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboRol.Font = new Font("Verdana", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboRol.ForeColor = Color.SaddleBrown;
             comboRol.FormattingEnabled = true;
             comboRol.Location = new Point(164, 190);
             comboRol.Name = "comboRol";
-            comboRol.Size = new Size(410, 28);
+            comboRol.Size = new Size(410, 30);
             comboRol.TabIndex = 7;
             comboRol.SelectedIndexChanged += comboRol_SelectedIndexChanged;
             // 

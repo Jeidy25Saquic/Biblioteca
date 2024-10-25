@@ -19,6 +19,12 @@ public class Usuario
     {
         return User;
     }
+
+    public bool Login(string username, string password)
+    {
+
+        return User == username && Contraseña == password;
+    }
     public Usuario()
 	{
 	}
