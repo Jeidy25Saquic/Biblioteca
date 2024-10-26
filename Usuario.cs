@@ -2,7 +2,7 @@
 
 public class Usuario
 {
-	private string User; 
+    private string User; 
 	private string Nombre;
 	private string Contraseña;
     private string Rol;
